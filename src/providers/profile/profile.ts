@@ -29,12 +29,15 @@ export class ProfileProvider {
     return this.userProfile.update({ birthDate });
   }
 
+
+  // A little bit special for update email and password
   updateEmail(newEmail: string, password: string): Promise<any> {
     const credential: firebase.auth.AuthCredential = firebase.auth.
       EmailAuthProvider.credential(
         this.currentUser.email,
         password
       );
+      // must reauthenticate again... 
     return this.currentUser
       .reauthenticateWithCredential(credential)
       .then(user => {

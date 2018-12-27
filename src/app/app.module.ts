@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AuthProvider } from '../providers/auth/auth';
 import { ProfileProvider } from '../providers/profile/profile';
+import { EventProvider } from '../providers/event/event';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProfileProvider } from '../providers/profile/profile';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     ProfileProvider,
-    ProfileProvider
+    ProfileProvider,
+    EventProvider
   ]
 })
 export class AppModule {}
