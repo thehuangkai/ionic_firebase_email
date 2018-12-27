@@ -1,5 +1,7 @@
 {
   "name": "blank_emulator_device",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
